@@ -14,7 +14,7 @@ namespace ConsoleUI
       CarManager carManager = new CarManager(new EfCarDal());
 
       Car car1 = new Car();
-      car1.CarName = "a";
+      car1.CarName = "BMW";
       car1.BrandId = 1;
       car1.ColorId = 1;
       car1.DailyPrice = 100;
@@ -24,10 +24,6 @@ namespace ConsoleUI
 
       carManager.AddCar(car1);
 
-      foreach (var car in carManager.GetAll())
-      {
-        Console.WriteLine(car.Description);
-      }
     }
   }
 }

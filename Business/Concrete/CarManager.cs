@@ -33,7 +33,7 @@ namespace Business.Concrete
 
     public List<Car> GetCarsByColorId(int colorId)
     {
-      return _carDal.GetCarsByGetCarsByColorId(colorId);
+      return _carDal.GetCarsByColorId(colorId);
     }
   }
 }
