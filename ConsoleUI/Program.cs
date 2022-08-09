@@ -13,16 +13,13 @@ namespace ConsoleUI
     {
       CarManager carManager = new CarManager(new EfCarDal());
 
-      Car car1 = new Car();
-      car1.CarName = "BMW";
-      car1.BrandId = 1;
-      car1.ColorId = 1;
-      car1.DailyPrice = 100;
-      car1.Description = "Hello";
-      car1.Id = 1;
-      car1.ModelYear = "1999";
+      Car car = new Car();
+      car.Id = 3;
+      car.CarName = "A7";
 
-      carManager.AddCar(car1);
+      carManager.Update(car);
+
+      
 
     }
   }

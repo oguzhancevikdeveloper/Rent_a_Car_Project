@@ -32,6 +32,7 @@ namespace Core.DataAccess.EtityFramework
         deletedEntity.State = EntityState.Deleted;
         context.SaveChanges();
       }
+      Console.WriteLine("Silme işlmei başarı ile gerçekleşti");
     }
 
     public TEntity Get(Expression<Func<TEntity, bool>> filter)
