@@ -1,4 +1,6 @@
 ﻿using Business.Abstarct;
+using Business.Constant;
+using Core.DataAccess.Utilities.Results;
 using DataAccess.Abstarct;
 using Entities.Concrete;
 using System;
@@ -16,34 +18,36 @@ namespace Business.Concrete
       _carDal = carDal;
     }
 
-    public void AddCar(Car car)
+    public IResult AddCar(Car car)
     {
        _carDal.Add(car);
+      return new SuccessResult(Messages.CarAdded);
     }
 
-    public void Delete(Car car)
+    public IResult Delete(Car car)
     {
       _carDal.Delete(car);
+      return new SuccessResult(Messages.CarDeleted);
+    }
+    public IResult Update(Car car)
+    {
+      _carDal.Update(car);
+      return new SuccessResult(Messages.CarUpdated);
     }
 
-    public List<Car> GetAll()
+    public IDataResult<List<Car>> GetAll()
     {
-      return _carDal.GetAll();
+      return new SuccessDataResult<List<Car>> (_carDal.GetAll());
     }
 
-    public List<Car> GetCarsByBrandId(int brandId)
+    public IDataResult<List<Car>> GetCarsByBrandId(int brandId)
     {
-      return _carDal.GetCarsByBrandId(brandId);
+      return new SuccessDataResult<List<Car>> (_carDal.GetCarsByBrandId(brandId));
     }
 
-    public List<Car> GetCarsByColorId(int colorId)
+    public IDataResult<List<Car>> GetCarsByColorId(int colorId)
     {
-      return _carDal.GetCarsByColorId(colorId);
-    }
-
-    public void Update(Car car)
-    {
-       _carDal.Update(car);
+      return new SuccessDataResult<List<Car>> (_carDal.GetCarsByColorId(colorId));
     }
   }
 }

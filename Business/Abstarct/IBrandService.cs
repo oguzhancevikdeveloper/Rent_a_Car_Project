@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.DataAccess.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,9 +8,9 @@ namespace Business.Abstarct
 {
   public interface IBrandService
   {
-    List<Brand> GetAll();
-    void AddCar(Brand brand);
-    void Delete(Brand brand);
-    void Update(Brand brand);
+    IDataResult<List<Brand>> GetAll();
+    IResult AddCar(Brand brand);
+    IResult Delete(Brand brand);
+    IResult Update(Brand brand);
   }
 }
