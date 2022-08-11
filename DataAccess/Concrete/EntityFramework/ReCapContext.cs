@@ -10,8 +10,8 @@ namespace DataAccess.Concrete
   {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseSqlServer(@"Server=DESKTOP-801UGNA\SQLEXPRESS;Database=ReCarDb;Trusted_Connection=true");
-      //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ReCarDb;Trusted_Connection=true");
+      //optionsBuilder.UseSqlServer(@"Server=DESKTOP-801UGNA\SQLEXPRESS;Database=ReCarDb;Trusted_Connection=true");
+      optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ReCarDb;Trusted_Connection=true");
     }
 
     public DbSet<Brand> Brands { get; set; }
