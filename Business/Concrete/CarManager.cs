@@ -3,9 +3,7 @@ using Business.Constant;
 using Core.DataAccess.Utilities.Results;
 using DataAccess.Abstarct;
 using Entities.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Business.Concrete
 {
@@ -17,13 +15,11 @@ namespace Business.Concrete
     {
       _carDal = carDal;
     }
-
     public IResult AddCar(Car car)
     {
        _carDal.Add(car);
       return new SuccessResult(Messages.CarAdded);
     }
-
     public IResult Delete(Car car)
     {
       _carDal.Delete(car);
@@ -34,17 +30,14 @@ namespace Business.Concrete
       _carDal.Update(car);
       return new SuccessResult(Messages.CarUpdated);
     }
-
     public IDataResult<List<Car>> GetAll()
     {
       return new SuccessDataResult<List<Car>> (_carDal.GetAll());
     }
-
     public IDataResult<List<Car>> GetCarsByBrandId(int brandId)
     {
       return new SuccessDataResult<List<Car>> (_carDal.GetCarsByBrandId(brandId));
     }
-
     public IDataResult<List<Car>> GetCarsByColorId(int colorId)
     {
       return new SuccessDataResult<List<Car>> (_carDal.GetCarsByColorId(colorId));

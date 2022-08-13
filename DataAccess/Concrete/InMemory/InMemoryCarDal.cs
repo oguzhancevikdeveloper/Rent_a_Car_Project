@@ -1,17 +1,12 @@
-﻿using DataAccess.Abstarct;
-using Entities.Concrete;
-using System;
+﻿using Entities.Concrete;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DataAccess.Concrete.InMemory
 {
   public class InMemoryCarDal 
   {
-
     List<Car> _car;
-
     public InMemoryCarDal()
     {
       _car = new List<Car>
@@ -23,23 +18,19 @@ namespace DataAccess.Concrete.InMemory
     {
       _car.Add(car);
     }
-
     public void Delete(Car car)
     {
       Car deleteCar = _car.SingleOrDefault(x => x.Id == car.Id);
       _car.Remove(deleteCar);
     }
-
     public List<Car> GetAll()
     {
       return _car;
     }
-
     public List<Car> GetAllById(Car car)
     {
       return _car.Where(x => x.Id == car.Id).ToList();
     }
-
     public void Update(Car car)
     {
       Car updateCar = _car.SingleOrDefault(x => x.Id == car.Id);

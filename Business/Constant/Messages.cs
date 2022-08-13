@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Business.Constant
+﻿namespace Business.Constant
 {
   public class Messages
   {
@@ -16,5 +12,17 @@ namespace Business.Constant
     public static string ColorUpdated = "Renk Güncellendi!";
     public static string ColorDeleted = "Renk Silindi!";
     public static string ColorAdded = "Renk Eklendi.";
+    public static string UserListed = "User Listelendi!";
+    public static string UserUpdated = "User Güncellendi!";
+    public static string UserDeleted = "User Silindi!";
+    public static string UserAdded = "User Eklendi.";
+    public static string CustomerListed = "Customer Listelendi!";
+    public static string CustomerUpdated = "Customer Güncellendi!";
+    public static string CustomerDeleted = "Customer Silindi!";
+    public static string CustomerAdded = "Customer Eklendi.";
+    public static string RentalListed = "Rental Listelendi!";
+    public static string RentalUpdated = "Rental Güncellendi!";
+    public static string RentalDeleted = "Rental Silindi!";
+    public static string RentalAdded = "Rental Eklendi.";
   }
 }
