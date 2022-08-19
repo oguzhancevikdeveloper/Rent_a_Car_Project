@@ -17,7 +17,7 @@ namespace Core.DataAccess.EtityFramework
         addedEntity.State = EntityState.Added;
         context.SaveChanges();
       }
-      Console.WriteLine("Ekleme işlmei başarı ile gerçekleşti");
+      Console.WriteLine("Ekleme işlemi başarı ile gerçekleşti");
     }
     public void Delete(TEntity entity)
     {
