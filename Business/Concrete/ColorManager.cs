@@ -14,7 +14,7 @@ namespace Business.Concrete
     {
       _colorDal = colorDal;
     }
-    public IResult AddCar(Color color)
+    public IResult Add(Color color)
     {
       _colorDal.Add(color);
       return new SuccessResult(Messages.ColorAdded);
