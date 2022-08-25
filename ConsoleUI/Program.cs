@@ -68,7 +68,7 @@ namespace ConsoleUI
       Console.Write("Password: ");
       user.Password = Console.ReadLine();
 
-      userManager.AddUser(user);
+      userManager.Add(user);
 
       
 
