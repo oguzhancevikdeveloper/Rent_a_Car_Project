@@ -14,7 +14,7 @@ namespace Business.Concrete
     {
       _customerDal = customerDal;
     }
-    public IResult AddCar(Customer customer)
+    public IResult Add(Customer customer)
     {
       _customerDal.Add(customer);
       return new SuccessResult(Messages.CustomerAdded);

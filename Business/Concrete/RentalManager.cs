@@ -14,7 +14,7 @@ namespace Business.Concrete
     {
       _rentalDal = rentalDal;
     }
-    public IResult AddCar(Rental rental)
+    public IResult Add(Rental rental)
     {
       _rentalDal.Add(rental);
       return new SuccessResult(Messages.RentalAdded);

@@ -7,7 +7,7 @@ namespace Business.Abstarct
   public interface IBrandService
   {
     IDataResult<List<Brand>> GetAll();
-    IResult AddCar(Brand brand);
+    IResult Add(Brand brand);
     IResult Delete(Brand brand);
     IResult Update(Brand brand);
   }
