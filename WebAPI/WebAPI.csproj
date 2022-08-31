@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="CarIamges\" />
+    <Folder Include="wwwroot\Uploads\Images\" />
   </ItemGroup>
 
   <ItemGroup>

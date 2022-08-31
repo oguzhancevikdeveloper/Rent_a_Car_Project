@@ -25,5 +25,9 @@
     public static string RentalDeleted = "Rental Silindi!";
     public static string RentalAdded = "Rental Eklendi.";
     public static string GetAllCarImage = "Tum araba image görüntülendi";
+    public static string SuccessUploadOfCarImage ="Araba resimleri başarı ile yüklendi.";
+    internal static string CarImageCountExceeded;
+    internal static string CarImageDeletedSuccessfully;
+    internal static string CarImageUpdatedSuccesfully;
   }
 }
