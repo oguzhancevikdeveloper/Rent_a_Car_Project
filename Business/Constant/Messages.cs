@@ -24,5 +24,6 @@
     public static string RentalUpdated = "Rental Güncellendi!";
     public static string RentalDeleted = "Rental Silindi!";
     public static string RentalAdded = "Rental Eklendi.";
+    public static string GetAllCarImage = "Tum araba image görüntülendi";
   }
 }
