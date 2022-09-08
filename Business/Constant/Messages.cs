@@ -1,4 +1,7 @@
-﻿namespace Business.Constant
+﻿using Core.Entities.Concrete;
+using System.Runtime.Serialization;
+
+namespace Business.Constant
 {
   public class Messages
   {
@@ -26,8 +29,15 @@
     public static string RentalAdded = "Rental Eklendi.";
     public static string GetAllCarImage = "Tum araba image görüntülendi";
     public static string SuccessUploadOfCarImage ="Araba resimleri başarı ile yüklendi.";
-    internal static string CarImageCountExceeded;
-    internal static string CarImageDeletedSuccessfully;
-    internal static string CarImageUpdatedSuccesfully;
+    public static string CarImageCountExceeded="";
+    public static string CarImageDeletedSuccessfully = "";
+    public static string CarImageUpdatedSuccesfully = "";
+    public static string AuthorizationDenied="";
+    public static string UserRegistered="";
+    public static string UserNotFound="";
+    public static string PasswordError="";
+    public static string SuccessfulLogin="";
+    public static string UserAlreadyExists="";
+    public static string AccessTokenCreated="";
   }
 }

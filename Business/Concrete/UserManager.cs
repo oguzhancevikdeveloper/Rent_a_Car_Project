@@ -1,6 +1,7 @@
 ﻿using Business.Abstarct;
 using Business.Constant;
 using Core.DataAccess.Utilities.Results;
+using Core.Entities.Concrete;
 using DataAccess.Abstarct;
 using Entities.Concrete;
 using System.Collections.Generic;
@@ -28,6 +29,17 @@ namespace Business.Concrete
     {
       return new SuccessDataResult<List<User>>(_userDal.GetAll());
     }
+
+    public User GetByMail(string email)
+    {
+      return _userDal.Get(u => u.Email == email);
+    }
+
+    public List<OperationClaim> GetClaims(User user)
+    {
+      return _userDal.GetClaims(user);
+    }
+
     public IResult Update(User user)
     {
       _userDal.Update(user);

@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
@@ -66,12 +67,9 @@ namespace ConsoleUI
       Console.Write("Email: ");
       user.Email = Console.ReadLine();
       Console.Write("Password: ");
-      user.Password = Console.ReadLine();
 
-      userManager.Add(user);
 
       
-
 
       Console.WriteLine("Araba Kiralama İçin Hoşgeldiniz!");
       Console.WriteLine("Lütfen kiralamak istediğiniz arabayı numara olarak seçiniz");
@@ -93,14 +91,14 @@ namespace ConsoleUI
     }
     public static void UserUpdate()
     {
-      UserManager userManager = new UserManager(new EfUserDal());
-      User user1 = new User();
-      user1.Id = 1;
-      user1.FirstName = "Oguzhan";
-      user1.LastName = "Cevikkk";
-      user1.Email = "oguzhancevikkk@gmail.com";
-      user1.Password = "132456";
-      userManager.Update(user1);
+      //UserManager userManager = new UserManager(new EfUserDal());
+      //User user1 = new User();
+      //user1.Id = 1;
+      //user1.FirstName = "Oguzhan";
+      //user1.LastName = "Cevikkk";
+      //user1.Email = "oguzhancevikkk@gmail.com";
+      //user1.Password = "132456";
+      //userManager.Update(user1);
 
    
 
